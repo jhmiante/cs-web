@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="_estilo.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+
+	<div id="top-menu"></div>
+	<script type="text/javascript" src="https://jhmiante.github.io/Js/top-menu.js"></script>
+
+
+<br><br><br><br>
+<h1 class="text-center">JavaScript</h1>
+
+<div class="DivClass">
+	<p>
+		• Linguagem integrada ao navegador. <br>
+		• Usa o chamado “modelo de execução controlado por eventos”, ou seja, o código JavaScript
+		só é executado quando o evento ao qual está associado é acionado (em alguns casos,
+		podemos inserir o código sem a associação a eventos e o mesmo é executado conforme
+		o navegador interpreta a página, mas isso é menos usual ).
+		• Processamento do lado cliente, no navegador. <br>
+		É uma linguagem interpretada, diferente de outras linguagens que fazem o processo de
+		compilação antes de executar o programa como, por exemplo, a linguagem Java.
+	</p>
+
+	<h3>JavaScript – para que serve?</h3>
+
+	<p>
+		Javascript é uma linguagem desenvolvida para a internet, com ela é possível realizarmos
+		validações do lado cliente, interações entre páginas. <br>
+		Com javascript é possível alterar dinamicamente estilos e elementos da página HTML, quando
+		juntamos javascript com css temos então o DHTML, ou criação de HTML dinamicamente.
+	</p>
+
+	<h3>O que podemos fazer com JavaScript?</h3>
+
+	<p>Usos mais comuns de JavaScript:</p>
+
+	<ul>
+		<li>Fazer algumas animações (como menus e submenus)</li>
+		<li>Validar formulários antes do envio</li>
+		<li>“Conversar” com o servidor usando XML</li>
+		<li>Identificar o contexto (navegador, tamanho de tela etc.) e definir os comportamentos em função dele.</li>
+	</ul>
+
+	<h3>Quando é executado um programa em Javascript?</h3>
+
+	<p>
+		Peguemos o site do Google como exemplo:
+	</p>
+
+	<ul>
+		<li>Quando muda a cor de contorno do campo?</li>
+		<li>Quando se abre o autocomplete da procura?</li>
+		<li>Quando se abrem os detalhes de um link? (aquilo que aparece do lado direito do link). “Um programa é uma lista de comandos (ou ações) que devem ser executados em ordem”</li>
+	</ul>
+
+</div>
+
+<div class="DivClass">
+	<h2>Evento</h2>
+
+	<p>
+		Todo evento acontece em um elemento da página. <br>
+		E as reações aos eventos (programadas em JavaScript) são sempre registradas como propriedades dos elementos
+	</p>
+
+	<table border="1" width="800" class="text-center">
+		<tr class="titulo">
+			<td>Elementos </td>
+			<td>Evento </td>
+			<td>Propriedade que registra reação</td>
+		</tr>
+
+		<tr>
+			<td>Todos elementos que aparecem na página</td>
+			<td>
+				<table width="100%">
+					<tr>						
+						<td>Clique no elemento</td>
+					</tr>
+					<tr class="bg-blue">
+						<td>Mouse passando sobre</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table width="100%">
+					<tr>						
+						<td>onclick</td>
+					</tr>
+					<tr class="bg-blue">
+						<td>onmouseover</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td>input, select, textarea</td>
+			<td>
+				<table width="100%">
+					<tr>						
+						<td>onclick</td>
+					</tr>
+					<tr class="bg-blue">
+						<td>onmouseover</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table width="100%">
+					<tr>						
+						<td>onfocus</td>
+					</tr>
+					<tr class="bg-blue">
+						<td>onblur</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Form</td>
+			<td>Formulário sendo enviado</td>
+			<td>onsubmit</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Body</td>
+			<td>Página terminou de ser montada</td>
+			<td>onload</td>
+		</tr>
+	</table>
+</div>
+
+<div class="DivClass">
+	<h2>Como inserir um código JavaScript na página?</h2>
+
+	<p>Podemos inserir nossos códigos JavaScript das seguintes formas:</p>
+
+	<ul>
+		<li> Dentro de um marcador html</li>
+		<li> Dentro do corpo da página &lt;body>....&lt;/body></li>
+		<li> Dentro do cabeçalho &lt;head>....&lt;/head> (Em um arquivo separado do html, este arquivo deve ter a extensão .js)</li>
+	</ul>
+
+	<p>Não se preocupe com os comandos em Js por hora, iremos abordar mais a frente.</p>
+
+	<br><hr>
+
+	<h3>JavaScript em uma tag</h3>
+
+	<p>
+		Quando inserimos um código JavaScript em uma tag, este é sempre associado a um evento. <br>
+		Note que, se o JavaScript estiver envolvido por aspas, só é possível usar apóstrofes no código
+		(que, no JavaScript, tem a mesma função).		
+	</p>
+
+	<p>
+		<strong>Exemplo:</strong>
+	</p>
+
+	<p>
+		&lt;input type="button" value="Clique" onclick="this.value='Texto alterado'">	
+	</p>
+
+	<input type="button" value="Clique" onclick="this.value='Texto alterado'">
+
+	<br><hr>
+
+	<h3>JavaScript dentro do body e head</h3>
+
+	<p>
+		Se fizermos uma comparação com CSS, esse modo de inserir JavaScript em uma página,
+		seria o modo incorporado. <br>
+		Dentro do body ou do head, utilizamos a tag &lt;script>. Note que os comandos podem ser
+		executados sem a necessidade de eventos. Isso não é o mais comum, mas é um recurso que
+		usaremos em nossos estudos. 
+	</p>
+
+	<p>
+		<strong>Exemplo:</strong>
+	</p>
+
+	<p>
+		&lt;p id="p-texto">Texto Escrito na Tag&lt;/p> <br><br>
+
+		&lt;script type="text/javascript"><br>
+			document.getElementById("p-texto").innerHTML = "Texto Alterado pelo JavaScript";<br>
+		&lt;/script> <br>
+	</p>
+
+	<p>----- ----- ----- ----- ----- ----- ----- -----</p>
+	<p id="p-texto">Texto Escrito na Tag</p>
+	<p>----- ----- ----- ----- ----- ----- ----- -----</p>
+
+	<script type="text/javascript">
+		document.getElementById("p-texto").innerHTML = "Texto Alterado pelo JavaScript";
+	</script>
+
+	<br><hr>
+
+	<h3>Arquivo JavaScript</h3>
+
+	<p>
+		Assim como em CSS, também podemos criar um arquivo separado do html com nossos
+		códigos em JavaScript, esse arquivo deve ser salvo com a extensão .js e é chamado no cabeçalho
+		da página com a tag &lt;script>
+	</p>
+
+	<p>
+		<strong>Exemplo:</strong>
+	</p>
+
+	<p>&lt;script type="text/javascript" src="arquivoJavaScript.js">&lt;/script></p>
+
+	<br><hr>
+
+	<h4>Obs. Podemos ter as três formas em um mesmo arquivo HTML, depende da necessidade.</h4>
+</div>	
+
+<div class="DivClass">
+	<h2>Onde se armazenam os dados?</h2>
+
+	<p>Sempre em um lugar na memória do computador, que pode ser do tipo: Constante ou Variável.</p>
+	<p><strong>• Constante </strong>– seu conteúdo não muda (ou seja, é constante)</p>
+	<p><strong>• Variável </strong>– seu conteúdo pode ser trocado (ou seja, é variável)</p>
+	<p>Em JavaScript apenas estudaremos VARIÁVEIS, pois nem todos os navegadores reconhecem constantes. </p>
+
+	<h3>Tipos de variáveis</h3>
+	<p>JavaScript é uma linguagem de tipos de variáveis flexíveis, ao contrário de outras linguagens que exigem a declaração de uma variável com um tipo de dado definido.</p>
+	<p>Logo, não precisamos definir o tipo de uma variável. Com isso podemos mudar seu valor de texto para número, por exemplo, durante a execução do script (prática que deve ser evitada!).</p>
+
+	<p><strong>Exemplo:</strong></p>
+
+	<p>
+		var nome=“Fulano”;
+		<br>
+		nome=“Fulano”;
+		<br>
+		var nome; 
+	</p>
+
+	<h3>Nomes de variáveis</h3>
+
+	<h4>Variáveis</h4>
+	<ul>
+		<li>Todo nome de variável ou constante deve começar com uma letra ou um underscore (“_”);</li>
+		<li>Caracteres subsequentes devem ser letras ou números;</li>
+		<li>Não deve conter espaço em branco ou caracteres especiais;</li>
+		<li>Não deve ser uma palavra reservada.</li>
+	</ul>
+
+	<h4>JavaScript é Case-Sensitive, logo as variáveis abaixo são todas diferentes:</h4>
+	<ul>
+		<li>quantidade</li>
+		<li>QUANTIDADE</li>
+		<li>Quantidade</li>
+		<li>QUantidade</li>
+	</ul>
+
+</div>
+
+<div class="DivClass">
+	<h2>Como trabalhar com dados</h2>
+
+	<p>Por exemplo, e se eu quiser transferir um dado de um lugar para outro? </p>
+
+	<p>Operação de atribuição (operador =)</p>
+
+	<p><strong>
+		x = y; <br>
+		a = b + c
+	</strong></p>
+
+	<p>A variável x recebe o conteúdo da variável y</p>
+	<p>A variável a recebe o RESULTADO da operação b + c</p>
+
+	<h3>Operadores Aritméticos para dados do tipo Número</h3>
+
+	<p>Para você verificar a tabela abaixo, declaramos uma variável x igual a 10</p>
+	<p><strong>var x=10;</strong></p>
+
+	<table width="700" border="1" class="text-center">
+		<tr class="titulo">
+			<td>OPERADOR</td>
+			<td></td>
+			<td>EXEMPLO</td>
+			<td>RESULTADO</td>
+		</tr>
+
+		<tr>
+			<td>+</td>
+			<td>Adição</td>
+			<td>z = x + 10</td>
+			<td>z = 20</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>-</td>
+			<td>Subtração</td>
+			<td>z = x - 10</td>
+			<td>z = 0</td>
+		</tr>
+
+		<tr>
+			<td>*</td>
+			<td>Multiplicação</td>
+			<td>z = x * 10</td>
+			<td>z = 100</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>/</td>
+			<td>Divisão</td>
+			<td>z = x / 10</td>
+			<td>z = 1</td>
+		</tr>
+
+		<tr>
+			<td>%</td>
+			<td>Módulo (Resto da Divisão)</td>
+			<td>z = x % 3</td>
+			<td>z = 1</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>++</td>
+			<td>Incremento Antes</td>
+			<td>++z</td>
+			<td>z = 11</td>
+		</tr>
+
+		<tr>
+			<td>++</td>
+			<td>Incremento Depois</td>
+			<td>z++</td>
+			<td>z = 10</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>--</td>
+			<td>Decremento Antes</td>
+			<td>--z</td>
+			<td>z = 9</td>
+		</tr>
+
+		<tr>
+			<td>--</td>
+			<td>Decremento Depois</td>
+			<td>z--</td>
+			<td>z = 10</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="DivClass">
+	<h2>Juntando Textos - Concatenação de Strings</h2>
+
+	<p>Também usamos o operador “+” para concatenar Strings (textos) em JavaScript </p>
+
+	<p>
+		<strong>Exemplo:</strong> <br><br>
+		var x = “Bom ”;<br>
+		var y = “dia”;<br>
+		var z = x + y;<br><br>
+		// após a execução o resultado será: <strong>z = Bom dia</strong>
+	</p>
+
+	<p>Cuidado, quando usamos o operador “+” com números e textos, o resultado é sempre texto (o número é convertido automaticamente);</p>
+
+	<p>
+		var x=4;<br>
+		var y=“a”;<br>
+		var z=x+y; // o resultado será z=“4a”<br><br>
+		var x=“4”;<br>
+		var y=“4”;<br>
+		var z=x+y; //o resultado será z=“44”
+	</p>
+
+	<h3>Por que saber sobre tipos é importante?</h3>
+
+	<p>
+		Apesar de você não declarar os tipos das variáveis, o JavaScript sabe sempre o tipo de dado com que está trabalhando. E para ele, tudo que o usuário escreve é TEXTO, mesmo que o usuário escreva algarismos. Como para TEXTO o sinal de + significa uma coisa diferente do que para os NÚMEROS, isso pode ficar complicado.
+	</p>
+
+	<p>
+		Por isso, se numa operação existe um NÚMERO e um TEXTO, o NÚMERO é sempre convertido e a operação ocorre como se tudo fosse TEXTO.
+	</p>
+</div>
+
+<div class="DivClass">
+	<h2>Conversão de tipos</h2>
+
+	<p>
+		Como comentado anteriormente, quando o usuário entra com dados de qualquer forma (veremos uma forma mais a frente), os valores lidos são sempre textos. Caso seja necessário realizar alguma operação matemática com os valores lidos, precisamos inicialmente convertêlos em números. Para isso temos duas funções em JavaScript que convertem para inteiro ou para float (número com casas decimais).
+	</p>
+
+	<p>
+		Para converter um texto em número inteiro utilizado a função parseInt.
+	</p>
+	<p>variável = parseInt (valor [, base]);</p>
+
+	<p>Para converter um texto em número real (float), utilizamos a função parseFloat.</p>
+	<p>variável = parseFloat (valor);</p>
+	
+	<br>
+
+	<p>É uma boa prática inserirmos comentários em nossos códigos, em JavaScript podemos fazer isso de duas formas:</p>
+
+	<p>Para Comentários de várias linhas:</p>
+	<p>
+		/* Inserimos aqui <br>
+		Nossos comentários <br>
+		Em várias linhas <br>
+		*/
+	</p>
+
+	<p>Para Comentários de uma única linha:</p>
+	<p>//Aqui inserimos somente uma linha de comentário</p>
+</div>
+
+<div class="DivClass">
+	<h2>Comandos e Funções</h2>
+
+	<p>
+		Os Comandos sempre chamam Funções (por isso os Comandos também são chamados de ‘Chamadas de Funções’). E essas Funções são criadas assim:
+	</p>
+
+	<p>function &lt;nome da função> ([&lt;lista de parâmetros>])</p>
+
+	<p>&lt;bloco de instruções></p>
+
+	<hr>
+
+	<h3>Instruções Simples X Bloco de Instruções</h3>
+
+	<p>
+		Para entender a função, primeiro precisamos saber o que significa essa [&lt;lista de parâmetros>]
+	</p>
+	<p>
+		Uma Instrução Simples sempre termina com “;”
+	</p>
+
+	<p>
+		var x = 12;		
+	</p>
+
+	<br>
+
+	<p>
+		Um Bloco de Instruções começa com um “{“ e termina com um “}”. E dentro dele vai uma série de instruções:
+	</p>
+
+	<p>
+		{ <br>
+		var x = 12;<br>
+		alert(x);<br>
+		}
+	</p>
+
+	<h4>Para que servem os Blocos de Instrução?</h4>
+
+	<ul>
+		<li>Rotina de um comando – Função</li>
+		<li>Execução condicional</li>
+		<li>Repetição</li>
+	</ul>
+
+
+
+</div>
+
+<div class="DivClass">
+	<h2>Operadores</h2>
+
+	<hr>
+
+	<h3>Operadores de Comparação</h3>
+
+	<table border="1" class="text-center" width="700">
+		<tr class="titulo">
+			<td>OPERADOR</td>
+			<td>NOME</td>
+			<td>EXEMPLO</td>
+			<td>RESULTADO</td>
+		</tr>
+
+		<tr>
+			<td>==</td>
+			<td>Igual</td>
+			<td>x == y</td>
+			<td>Verdadeiro se x for igual a y</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>!=</td>
+			<td>Diferente</td>
+			<td>x != y</td>
+			<td>Verdadeiro se x for diferente a y</td>
+		</tr>
+
+		<tr>
+			<td>===</td>
+			<td>Idêntico</td>
+			<td>x === y</td>
+			<td>Verdadeiro se x for igual a y e do mesmo tipo</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td><</td>
+			<td>Menor</td>
+			<td>x < y</td>
+			<td>Verdadeiro se x for menor a y</td>
+		</tr>
+
+		<tr>
+			<td>></td>
+			<td>Maior</td>
+			<td>x > y</td>
+			<td>Verdadeiro se x for maior a y</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td><=</td>
+			<td>Menor ou Igual</td>
+			<td>x <= y</td>
+			<td>Verdadeiro se x for menor ou igual a y</td>
+		</tr>
+
+		<tr>
+			<td>>=</td>
+			<td>Maior ou Igual</td>
+			<td>x >= y</td>
+			<td>Verdadeiro se x for maior ou igual a y</td>
+		</tr>
+
+	</table>
+
+	<br><hr>
+
+	<h3>Operadores Lógicos</h3>
+
+	<table border="1" class="text-center" width="700">
+		<tr class="titulo">
+			<td>OPERADOR</td>
+			<td>DESCRIÇÃO</td>
+			<td>EXEMPLO (a = 3 e b = 5)</td>
+		</tr>
+
+		<tr>
+			<td>&&</td>
+			<td>E Lógico: Retorna verdadeiro se ambas <br>expressões forem verdadeiras</td>
+			<td>
+				a == 3 && b < 10 //retorna verdadeiro <br>
+				a != 3 && b == 5 // retorna falso
+			</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>||</td>
+			<td>Ou Lógico: Retorna verdadeiro se uma das <br>expressões forem verdadeiras</td>
+			<td>
+				a == 3 || b < 10 // retorna verdadeiro <br>
+				a!=3 || b==5 // retorna verdadeiro <br>
+				a==1 || b==3 // retorna falso
+			</td>
+		</tr>
+
+		<tr>
+			<td>!</td>
+			<td>Não Lógico: inverte o resultado <br> se verdadeiro retorna falso e vice versa</td>
+			<td>
+				! (a==3) // retorna falso <br>
+				! (a!=3) // retorna verdadeiro
+			</td>
+		</tr>
+	</table>
+
+	<h4>Tabela de Resultado Operador &&</h4>
+
+	<table border="1" class="text-center" width="700">
+		<tr class="titulo">
+			<td>TESTE 1</td>
+			<td>TESTE 2</td>
+			<td>RESULTADO &&</td>
+		</tr>
+
+		<tr>
+			<td>Verdadeiro</td>
+			<td>Verdadeiro</td>
+			<td>Verdadeiro</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Verdadeiro</td>
+			<td>Falso</td>
+			<td>Falso</td>
+		</tr>
+
+		<tr>
+			<td>Falso</td>
+			<td>Verdadeiro</td>
+			<td>Falso</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Falso</td>
+			<td>Falso</td>
+			<td>Falso</td>
+		</tr>
+	</table>
+
+	<h4>Tabela de Resultado Operador !!</h4>
+
+	<table border="1" class="text-center" width="700">
+		<tr class="titulo">
+			<td>TESTE 1</td>
+			<td>TESTE 2</td>
+			<td>RESULTADO &&</td>
+		</tr>
+
+		<tr>
+			<td>Verdadeiro</td>
+			<td>Verdadeiro</td>
+			<td>Verdadeiro</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Verdadeiro</td>
+			<td>Falso</td>
+			<td>Verdadeiro</td>
+		</tr>
+
+		<tr>
+			<td>Falso</td>
+			<td>Verdadeiro</td>
+			<td>Verdadeiro</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Falso</td>
+			<td>Falso</td>
+			<td>Falso</td>
+		</tr>
+	</table>
+
+
+	<h4>Tabela de Resultado Operador !</h4>
+
+	<table border="1" class="text-center" width="700">
+		<tr class="titulo">
+			<td>TESTE</td>
+			<td>RESULTADO &&</td>
+		</tr>
+
+		<tr>
+			<td>Verdadeiro</td>
+			<td>Falso</td>
+		</tr>
+
+		<tr class="bg-blue">
+			<td>Falso</td>
+			<td>Verdadeiro</td>
+		</tr>
+	</table>
+
+</div>
+
+<div class="DivClass">
+
+<h2>Estruturas de decisão – execução condicional</h2>
+
+<p>São blocos de código que serão executados somente se uma dada condição for satisfeita.</p>
+<p>Na nossa rotina, estamos sempre tomando decisões, por exemplo:</p>
+
+<ul>
+	<li>se estiver chovendo levo o guarda-chuva.</li>
+	<li>se for final de semana e estiver sol irei para a praia.</li>
+</ul>
+
+<p>Temos disponível em JavaScript as seguintes estruturas de decisões:</p>
+
+<ul>
+	<li>if</li>
+	<li>if ... else</li>
+	<li>if ... else if ... else...</li>
+	<li>switch</li>
+</ul>
+
+<br>
+<hr>
+	
+	<p>
+		Para testar os códigos Js iremos utilizar o console do Browser, para visualizar clique com o direito em qualquer lugar da página e clique em Inspecionar, irá abrir uma janela, nela clique em console.
+	</p>
+
+	<br><hr>
+
+	<h3>Estrutura de decisão if</h3>
+
+	<p>Irá verificar uma condição, se for aceita irá ler o bloco de código, caso não seja aceita não irá ler o bloco de código</p>
+
+	<div class="CodClass">
+		<p>
+			&lt;script type="text/javascript"> <br> <br>
+				console.log("Condicional IF") <br>
+		 		<br>
+				var Num = 5; <br> <br>
+
+				if (Num > 4) { <br>
+					console.log("Teste IF aceito, lendo o Bloco IF") <br>
+				} <br> <br>
+
+				if (Num == 10) { <br>
+					console.log("Teste IF não aceito, Não irá o Bloco IF") <br>
+				} <br> <br>
+			&lt;/script>
+		</p>
+	</div>
+	
+	<hr>
+
+	<h3>Estrutura de decisão if ... else</h3>
+
+	<p>Irá verificar uma condição, se for aceita irá ler o bloco de código if, caso não seja aceita irá ler o bloco de código else</p>
+
+	<div class="CodClass">
+		<p>
+			&lt;script type="text/javascript"> <br> <br>
+				console.log("Condicional IF ... ELSE")<br><br>
+
+				var a = 5;<br><br>
+
+				if (a > 4) <br>
+					{<br>
+						console.log("Teste IF aceito, lendo o Bloco IF")<br>
+					} <br>
+					else <br>
+					{<br>
+						console.log("Teste IF aceito, Não irá ler o bloco Else")	<br>
+					}<br><br>
+
+				if (a == 10) <br>
+					{<br>
+						console.log("Teste IF não aceito, Não irá o Bloco IF")<br>
+					}<br>
+					else <br>
+					{<br>
+						console.log("Teste IF não aceito, irá ler o bloco Else")	<br>
+					} <br><br>
+			&lt;/script>
+		</p>
+	</div>
+
+	<hr>
+
+	<h3>Estrutura de decisão if ... else if ... else</h3>
+
+	<p>
+		Irá verificar uma condição, se for aceita irá ler o bloco de código if, caso não seja aceita irá realizar um novo teste, caso aceito irá ler o bloco else if, se não for aceito irá ler o bloco de código else
+	</p>
+
+	<p>
+		Podemos encadiar quantos else if forem necessário
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		console.log("Condicional IF ... ELSE IF ... ELSE") <br> <br>
+
+		var data = new Date() <br>
+		var hora = data.getHours() <br> <br>
+
+		if (hora < 12 )  <br>
+			{ <br>
+				console.log("Bom dia!!!") <br>
+			} <br>
+			else if (hora < 18) <br>
+			{ <br>
+				console.log("Boa tarde!!!") <br>
+			} <br>
+			else <br>
+			{ <br>
+				console.log("Boa Noite!!!") <br>
+			} <br> <br>
+
+
+		&lt;/script>
+
+		
+	</div>
+		<p>
+			No exemplo acima, irá verificar a hora atual, caso seja antes das 12:00 irá retornar "Bom dia", caso seja após 12:00 e antes das 18:00, irá retornar "Boa tarde" e caso seja após 18:00 irá retornar "Boa noite"
+		</p>
+	<hr>
+
+	<h3>Estrutura de decisão switch ... case</h3>
+
+	<p>Essa condição verifica o valor de um caso, se for aceito irá ler o bloco de código daquele caso</p>
+
+	<p>
+		<strong>
+			SINTAXE:	
+		</strong>
+	</p>
+
+	<p>
+		switch (valor) { <br>
+			case valor1:<br>
+			//instruções 1<br>
+			break<br><br>
+
+			case valor2:<br>
+			//instruções 2<br>
+			break<br><br>
+
+			case valor3:<br>
+			//instruções 3<br>
+			break<br><br>
+
+			default:<br>
+			//instruções padrão<br>
+			}
+	</p>
+
+	<p>
+		Para cada caso devemos colocar o comando break, este comando irá finalizar o caso e evitar que o caso posterior seja executado.
+	</p>
+
+	<p>
+		O default é opcional, ele é executado quando nenhum caso anterior é acionado.
+	</p>
+
+	<p>
+		Não podemos fazer comparações no case, como x > y, por exemplo.
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		console.log("Condicional SWITCH CASE") <br> <br>
+
+		var Data = new Date(); <br>
+		var diaDaSemana = Data.getDay(); <br> <br>
+
+		switch (diaDaSemana) <br>
+			{ <br>
+				case 0: <br>
+					console.log("Domingo de descanso merecido :)") <br>
+					break <br> <br>
+
+				case 5: <br>
+					console.log("Opa... Sextou U.u") <br>
+					break <br> <br>
+
+				case 6: <br>
+					console.log("Que maravilha... Sabadão chegou :p") <br>
+					break <br> <br>
+
+				default: <br>
+					console.log("Semana Longaaaaaaaa....") <br>
+			} <br> <br>
+
+
+		&lt;/script>
+	</div>
+</div>
+
+<div class="DivClass">
+	<h2>Estruturas de repetição</h2>
+
+	<p>
+		Utilizadas quando necessitamos repetir um bloco de instruções. Podemos executar um laço de repetição com um número específico de vezes, ou enquanto uma condição for verdadeira. Essas estruturas também são conhecidas como laço de repetição ou loop. Em JavaScript veremos <i>for</i> e <i>while</i>.
+	</p>
+
+	<br><hr><br>
+
+	<h3>Estrutura de repetição FOR</h3>
+
+	<p>
+		Utilizada quando sabemos o número de repetições que serão feitas.
+	</p>
+
+	<p><strong>Sintaxe:</strong></p>
+
+	<p>
+		for (valor inicial; condição; incremento/decremento) <br>
+			{<br>
+			//instruções que serão repetidas<br>
+			}<br>
+	</p>
+
+	<p><strong>Exemplo:</strong></p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		console.log("Estrutura de Repetição FOR") <br> <br>
+
+		for (cont = 1; cont <= 10 ; cont++) <br>
+			{<br>
+				console.log("Repetição Número: " + cont + "/10");<br>
+			}<br><br>
+
+		&lt;/script>
+	</div>
+
+	<br><hr><br>
+
+	<h3>Estrutura de repetição WHILE</h3>
+
+	<p>
+		Executa um bloco de instruções enquanto uma certa condição for verdadeira.
+	</p>
+
+	<p><strong>Sintaxe:</strong></p>
+
+	<p>
+		while (condição) <br>
+			{<br>
+			//instruções<br>
+			//alteração do valor da condição<br>
+			}<br>
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		console.log("Estrutura de Repetição WHILE") <br> <br>
+
+		var contarFim = 10; <br>
+		var cont = 1;<br><br>
+
+		while (cont <= contarFim)<br>
+			{<br>
+			console.log("Repetição While Número:" + cont + "/" + contarFim);<br>
+			cont++;<br>
+			}<br><br>
+		
+
+		&lt;/script>
+	</div>	
+
+</div>
+
+<div class="DivClass">
+	<h2>Vetores</h2>
+
+	<p>
+		Um Vetor é uma coleção de espaços na memória, com posições definidas. Podemos atribuílo a uma variável, assim ele ganha um nome.
+	</p>
+	<p>
+		Em uma representação gráfica podemos visualizar um vetor da seguinte forma:
+	</p>
+
+	<img src="img/vetor.png" border="1">
+
+	<p>
+		<strong>Vetores em JavaScript</strong>
+	</p>
+
+	<ul>
+		<li>Para criar um vetor em JavaScript utilizamos o objeto Array, podemos criar um vetor de 4 formas:</li>
+		<li>Sem tamanho fixo (obviamente vazio, sem valores);</li>
+		<li>Com tamanho fixo (cada posição será vazia também);</li>
+		<li>Com valores (indicamos os dados que irão ser armazenados em cada posição);</li>
+		<li>Com valores de forma abreviada;</li>
+	</ul>
+		
+	<br><br>
+	<p><strong>Criando Vetores em Js</strong></p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		//vetor sem tamanho definido<br>
+		var vetor1 = new Array();<br><br>
+
+		//vetor com tamanho definido<br>
+		var vetor2=new Array(3);<br><br>
+
+		//vetor com posições e valores definidos<br>
+		var vetor3=new Array(“maça”,“banana”,“morango”);<br><br>
+
+		//vetor – declaração abreviada<br>
+		var vetor4 = [“limão”, “pera”, “uva”, “kiwi”];		<br><br>
+
+		&lt;/script>
+
+	</div>
+
+	<p><strong> OBS: </strong>em todos os casos acima, podemos inserir mais posições sempre que necessário.</p>
+
+	<p>
+		Para visualizarmos ou atribuirmos um valor para um vetor devemos acessar cada posição através do índice, este índice deve ficar entre colchetes “[...]”.
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		var frutas = new Array();<br><br>
+ 
+		 frutas[0]=“maça“;<br>
+		 frutas[1]=“banana“;<br>
+		 frutas[2]=“morango“;<br><br>
+
+		 console.log(frutas[2]);	<br><br>	
+
+		&lt;/script>
+
+	</div>
+
+	<p>
+		Em quase todos os casos em que trabalhamos com vetores, utilizamos uma estrutura de repetição para acessar suas posições, a mais comum seria a estrutura for, porém também podemos usar o while.
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		var frutas = new Array();<br><br>
+ 
+		 frutas[0]=“maça“;<br>
+		 frutas[1]=“banana“;<br>
+		 frutas[2]=“morango“;<br><br>
+
+		 console.log(frutas[2]);	<br><br>
+
+		 for (var i = 0; i <= 2; i++) <br>
+			{<br>
+			 	console.log(frutas[i])<br>
+			}<br><br>
+
+		&lt;/script>
+
+	</div>
+
+	<h3>O tamanho de um vetor</h3>
+
+	<p>
+		Todo vetor tem a propriedade length, que guarda o número de seus elementos e para interromper o laço, utiliza-se a instrução break.
+	</p>
+
+	<div class="CodClass">
+		
+		&lt;script type="text/javascript"> <br> <br>
+
+		var frutas = new Array();<br><br>
+ 
+		 frutas[0]=“maça“;<br>
+		 frutas[1]=“banana“;<br>
+		 frutas[2]=“morango“;<br><br>
+
+		 console.log(frutas[2]);	<br><br>
+
+		 for (var i = 0; i < frutas.length; i++)  <br>
+			{<br>
+			 	console.log(frutas[i])<br>
+			}<br><br>
+
+		&lt;/script>
+
+	</div>
+
+</div>
+
+<script type="text/javascript" src="JsFile.js"></script>
+</body>
+</html>

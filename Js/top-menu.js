@@ -15,7 +15,7 @@ var html =
 '            <a class="nav-link" href="https://jhmiante.github.io/Pages/003-CSS.html">CSS</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="https://jhmiante.github.io/Pages/">JavaScript</a>\n'+  
+'            <a class="nav-link" href="https://jhmiante.github.io/Pages/004-JavaScript.html">JavaScript</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
 '            <a class="nav-link disabled" href="https://jhmiante.github.io/Pages/">jQuery</a>\n'+  
