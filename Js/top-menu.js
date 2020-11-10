@@ -6,10 +6,10 @@ var html =
 '            <a class="nav-link" href="https://jhmiante.github.io/">Home <span class="sr-only">(current)</span></a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="Pages/001-Fundamentos-HTML.html">HTML</a>\n'+  
+'            <a class="nav-link" href="Pages/001-Fundamentos-HTML.html">HTML</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="#">HTML 5</a>\n'+  
+'            <a class="nav-link" href="Pages/002-HTML-5.html">HTML 5</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
 '            <a class="nav-link disabled" href="#">CSS</a>\n'+  
