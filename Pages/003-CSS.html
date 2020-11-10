@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+	<style type="text/css">
+		div
+		{
+			border:2px solid #a1a1a1;
+			padding:10px 40px;
+			background:#dddddd;
+			width:800px;
+			border-radius:25px;
+			-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+			-moz-box-shadow: 10px 10px 5px #888888; /* Firefox 3.6 and earlier */
+		 	box-shadow: 10px 10px 5px #888888;
+		 	margin-top: 25px;
+		 	margin-bottom: 25px;
+		}
+
+		h2 { text-shadow: 5px 5px 5px #00000F; }
+
+		#menu {
+				  position: fixed;
+				  right: 0;
+				  bottom: 10%;
+				  width: 8em;
+				  margin-top: -2.5em;
+				}
+	</style>
+</head>
+<body>
+
+	<div id="top-menu" class="fixed"></div>
+
+	<div id="container">
+		<img src="img/home.png" class="largura-cheia">
+	</div>
+
+	<script type="text/javascript" src="Js/top-menu.js"></script>
+
+	
+
+<h1>CSS</h1>
+<br>
+<hr>
+<br>
+<div>
+<section> <!-- O que é CSS -->
+	
+	<h3>Qual a diferença de HTML e CSS?</h3>
+
+	<p>HTML => Estrutura do site (Layout, blocos ...)</p>
+	<p> CSS => Formatação do site (Cores, fontes, exibição ...)</p>
+
+O propósito do HTML é conter tags de formatação de documento, o HTML define o conteúdo
+do documento e como exibido:
+
+<br>
+
+<h1>&lt;h1> Este é um título &lt;/h1></h1> 
+
+<p>&lt;p> Este é um parágrafo. &lt;/p> </p><br>
+
+Quando tags como &lt;font> e atributos de cor foram adicionados à especificação HTML 3.2,
+começou um pesadelo para os desenvolvedores web. Para resolver este problema, o World
+Wide Web Consortium (W3C), especificou CSS.
+<br>
+Em HTML 4.0, toda a formatação pode ser removida do documento HTML e armazenada
+em um arquivo CSS separado. Todos os browsers suportam CSS hoje.
+<br><br>
+
+<h4>Benefícios do CSS</h4>
+<p>
+CSS define como elementos HTML devem ser exibidos.
+Estilos são normalmente guardados em arquivos externos .css.
+Folhas de estilo externas permitem que você altere a aparência e o layout de todas as páginas
+de um site, apenas editando um único arquivo.
+Sintaxe CSS</p>
+
+<p>Uma regra CSS tem duas partes principais:</p>
+<p>• um seletor;<br>
+• e uma ou mais declarações.</p>
+
+<p>SINTAXE:</p>
+
+<p> <font color="red">SELETOR</font> { <font color="blue">Declaração</font>; <font color="blue">Declaração</font>; } </p>
+
+<p>ou</p>
+
+<p> <font color="red">SELETOR</font> { <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">Declaração</font>; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">Declaração</font>; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </p>
+
+<p>EXEMPLO:</p>
+<p> <font color="red">h1</font> { <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">color: blue</font>; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">font-size: 30px;</font> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </p>
+
+<p>Para inserir um código CSS pode ser utlizado o próprio documento ou um arquivo externo, recomenda-se utilizar um documento externo, pois pode ser reutilizado a mesma folha de estilo, porém vamos
+ aprender primeiramente ulilizar dentro do próprio html, para isso utiliza-se a tag &lt;style></p>
+
+<section>
+	&lt;style>
+	<p> <font color="red">h1</font> { <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">color: blue</font>; <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">font-size: 30px;</font> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </p>
+	&lt;/style>	
+</section>
+
+<style type="text/css">
+	h1 { color: blue; font-size: 30px;}
+
+	#IdCss { color: green; }
+
+	.ClassCss { color: darkgray; }
+</style>
+
+</section>
+</div>
+
+<div> <!-- Classe e ID -->
+	<h1>CSS id e CSS classe</h1>
+	<p>
+		Através do css você pode criar um estilo para um elemento do HTML, o css permite criar um
+		estilo para um seletor através do id e class.		
+	</p>
+
+	<h3>ID</h3>
+	<p id="IdCss">
+		O id é usado para especificar um estilo para um elemento único, o seletor id é atribuído ao id
+		do elemento HTML e definido com o caracter “#”. 
+	</p>
+
+		<section>
+			&lt;style>
+				<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">#NomeDoId</font> { <font color="blue">color: green</font>; } </p>
+			&lt;/style>	
+		</section>
+
+	<h3>Classe</h3>
+
+	<p class="ClassCss">
+		A classe é usada para especificar um estilo para um grupo de elementos, ela permite que
+		você crie um estilo para vários elementos do HTML com a mesma classe. (utilisa-se o . para referenciar a classe no css)
+	</p>
+
+		<section>
+			&lt;style>
+				<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">.NomeDaClasse</font> { <font color="blue">color: darkgray</font>; } </p>
+			&lt;/style>	
+		</section>
+</div>
+
+<div>
+	<h2>Estilo</h2>
+	<p>		
+		Como mencionado, existem mais de uma forma de incluir o css no seu arquivo, na verdade existem três maneiras de se utilizar o estilo, sendo: <br><br>
+		• Estilo externo <br>
+		• Estilo interno <br>	
+		• Estilo inline <br><br>
+		O estilo externo é ideal quando a formatação deve ser aplicado a várias páginas. Com um
+		arquivo externo você pode alterar um formato e ele será automaticamente em todo o projeto. <br><br>
+	</p>
+
+
+	<h3>Link Externo</h3>
+	<p>
+		Cada página deve ter um link para o estilo usando &lt;link>, essa tag deve estar dentro da seção &lt;head>
+
+		&lt;link rel=”stylesheet” type=”text/css” href=”mystyle.css” />
+
+		Um estilo externo pode ser escrito por qualquer editor, não deve conter nenhuma tag html. <br><br>
+		O arquivo deve ser salvo com a extensão .css.
+	</p>
+
+	<p> 
+		<font color="red">h1</font> { <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">color: blue</font>; <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">font-size: 30px;</font> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+	</p>
+
+	<br><br>
+
+	<h3>Estilo Interno</h3>
+
+	<p>O estilo interno é usado na própria página de html. O estilo é definido na seção (já utilizado nesta sessão)</p>
+
+	<section>
+		&lt;style>
+			<p> <font color="red">h1</font> { <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">color: blue</font>; <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">font-size: 30px;</font> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </p>
+		&lt;/style>	
+	</section>
+
+	<br><br>
+
+	<h3>Estilo Inline</h3>
+
+	<p>O estilo inline é usado diretamento no elemento HTML</p>
+
+	<p>&lt;p style=”color:sienna;margin-left:20px”>This is a paragraph. &lt;/p></p>
+
+</div>
+
+<div>
+	<h2>Estilo – background</h2>
+
+	<p>
+		As propriedades do background são usadas para criar efeitos a um elemento. <br><br>
+		• background-color <br>
+		• background-image <br>
+		• background-repeat <br>
+		• background-attachment <br>
+		• background-position <br><br>
+
+		A propriedade background-color especifica a cor de fundo do elemento.<br><br>
+		body {background-color:#b0c4de;}<br><br><br><br>
+
+		A propriedade background-image define uma imagem para o elemento;<br><br>
+		body {background-image:url(‘paper.gif’);}<br><br><br><br>
+
+		A propriedade background-image duplica a imagem horizontal e verticalmente.<br>
+		Algumas imagens podem ser repetidas somente horizontalmente ou verticalmente.<br><br>
+		body{ background-image:url(‘gradient2.png’); } <br><br><br><br>
+
+		Imagem repetida somente na horizontal <br>
+		body{ background-image:url(‘gradient2.png’); background-repeat:repeat-x; } <br><br><br><br>
+
+		Ao usar uma imagem de fundo, configurar a imagem para não atrapalhar o texto <br><br>
+		body{ background-image:url(‘img_tree.png’); background-repeat:no-repeat; } <br><br><br><br>
+
+		No exemplo acima, a imagem de fundo é mostrado no mesmo lugar que o texto. <br>
+		Queremos mudar a posição da imagem, de modo que ela não perturbe o texto. <br><br>
+		body{ background-image:url(‘img_tree.png’); background-repeat:no-repeat; background-position:right top; }<br>
+	</p>
+</div>
+
+<div>
+	<h2>Estilo – text</h2>
+
+	<p>
+		As propriedades do text: <br>
+		• text-align <br>
+		• text-decoration <br>
+		• text-transform <br>
+		• text-indent <br> <br>
+		A propriedade color é usada para configurar a cor do texto  <br><br>
+
+		body {color:blue;} <br>
+		h1 {color:#00ff00;} <br>
+		h2 {color:rgb(255,0,0);} <br><br> <br>
+
+		A propriedade text-align é usada para especificar o alinhamento do texto, a propriedade é
+		usada para alinhar a esquerda, direita, centralizado ou justificado. <br><br>
+		h1 {text-align:center;} <br>
+		p.date {text-align:right;} <br> <!-- tag p com a classe date -->
+		p.main {text-align:justify;} <br><br> <br> <!-- tag p com a classe main -->
+
+		A propriedade text-decoration é usada para configurar ou remover decorações do texto. <br>
+		O text-decoration é mais frequentemente utilizado nos links <br> <br>
+
+		a {text-decoration:none;} <br>
+		h1 {text-decoration:overline;} <br>
+		h2 {text-decoration:line-through;} <br>
+		h3 {text-decoration:underline;} <br>
+		h4 {text-decoration:blink;} <br> <br> <br>
+
+		A propriedade text-transform é usada para especificar o uppercase e lowercase nos textos. <br> <br>
+
+		p.uppercase {text-transform:uppercase;} <br>
+		p.lowercase {text-transform:lowercase;} <br>
+		p.capitalize {text-transform:capitalize;} <br> <br> <br>
+
+		A propriedade text-indentation é usada para especificar a identificação na 1a. linha do texto. <br> <br>
+
+		p {text-indent:50px;}
+	</p>
+</div>
+
+<div>
+	<h2>Estilo – font</h2>
+	<p>		
+		A propriedade fonte define família , tamanho e estilo do texto <br>
+		• font-family <br>
+		• font-style<br>
+		• font-size<br><br>
+
+		A família da fonte de um texto é definida com a propriedade font-family.<br>
+		A propriedade font-family deve manter nomes de fontes diversas como um sistema de
+		“retorno”. Se o navegador não suportar primeira, ele tentará a próxima.<br><br>
+
+		p{font-family:”Times New Roman”, Times, serif;}<br><br><br>
+
+		A propriedade font-style possui 3 valores <br>
+		normal – ( a própria fonte )<br>
+		italic – ( itálico )<br>
+		oblique – ( muito similar com o itálico mas menos utilizado )<br><br>
+		p.normal {font-style:normal;}<br>
+		p.italic {font-style:italic;}<br>
+		p.oblique {font-style:oblique;}<br><br><br>
+
+		A propriedade font-size define o tamanho do texto.<br>
+		É capaz de gerenciar o tamanho do texto.<br>
+		O valor font-size pode ser um tamanho absoluto ou relativo.<br><br><br>
+
+		<b>Tamanho absoluto:</b><br><br>
+		• Define o texto a um tamanho especificado;<br>
+		• Não permite que o usuário altere o tamanho do texto em todos os navegadores (ruim por
+		razões de acessibilidade)<br>
+		• Tamanho absoluto é útil quando o tamanho físico da saída é conhecida<br><br><br>
+
+		<b>Tamanho relativo:</b><br><br>
+		• Define o tamanho relativo aos elementos;<br>
+		• Permite que o usuário altere o tamanho do texto em navegadores;<br><br><br>
+
+		h1 {font-size:40px;} <br>
+		h2 {font-size:30px;} <br>
+		p {font-size:14px;} <br>
+		h1 {font-size:2.5em;} /* 40px/16=2.5em */  <br>
+		h2 {font-size:1.875em;} /* 30px/16=1.875em */ <br>
+		p {font-size:0.875em;} /* 14px/16=0.875em */ <br>
+		body {font-size:100%;} <br>
+		h1 {font-size:2.5em;} <br>
+		h2 {font-size:1.875em;} <br>
+		p {font-size:0.875em;} <br>
+
+	</p>
+</div>
+
+<div>
+	<h2>Estilo – border</h2>
+
+	<p style="border-style:dotted solid;">
+		A propriedade border-style permite especificar o estilo e a cor dos elementos bordas. <br>
+		• dotted<br>
+		• dashed<br>
+		• solid<br>
+		• double<br>
+		• groove<br>
+		• ridge<br>
+		• inset<br>
+		• Outset<br><br>
+		border-style:dotted solid;
+	</p>
+
+	<p style="	border-top-style:dotted;
+			 	border-right-style:solid;
+			 	border-bottom-style:dotted;
+			 	border-left-style:solid;">
+
+		A propriedade pode ser setada individualmente<br><br>
+		p{ <br>
+		 border-top-style:dotted;<br>
+		 border-right-style:solid;<br>
+		 border-bottom-style:dotted;<br>
+		 border-left-style:solid;<br>
+		}
+	</p>
+</div>
+
+<div style="margin-top:100px;
+			margin-bottom:100px;
+			margin-right:50px;
+			margin-left:50px;">
+
+	<h2>Estilo – margin</h2>
+	<p>
+		A margem não tem uma cor de fundo e é completamente transparente. <br>
+		A margem superior, inferior, direita e esquerda pode ser alterada de forma independente
+		usando suas propriedades separadas.<br><br>
+
+		margin-top:100px;<br>
+		margin-bottom:100px;<br>
+		margin-right:50px;<br>
+		margin-left:50px;
+	</p>
+</div>
+
+<div style="padding-top:25px;
+			padding-bottom:25px;
+			padding-right:50px;
+			padding-left:50px;">
+
+	<h2>Estilo – padding</h2>
+	<p>		
+		A propriedade padding define o espaço entre o elemento e a borda <br>
+		O espaçamento superior, inferior, direita e esquerda pode ser alterado de forma independente
+		usando suas propriedades separadas.<br><br>
+
+		padding-top:25px;<br>
+		padding-bottom:25px;<br>
+		padding-right:50px;<br>
+		padding-left:50px;
+	</p>
+
+</div>
+
+<div>
+	<h2>CSS3 é divido em módulos</h2>
+	<p>
+		Alguns dos mais importantes módulos são: <br>
+		• Selectors <br>
+		• Box Model <br>
+		• Backgrounds and Borders <br>
+		• Text Effects <br>
+		• 2D/3D Transformations <br><br>
+		Lembrando que o CSS3 ainda está sobre o desenvolvimento da W3C. 
+	</p>
+
+	<p>Alguns módulos não são reconhecidos automaticamento, precisando importar para a versão do navegador <br><br>
+
+		Google Chrome => -webkit- <br>
+		Safari => -webkit- <br>
+		Mozzila	=>	-moz- <br>
+		Opera => -o-
+
+	</p>
+</div>
+
+<div>
+	<h2>CSS3 Cantos arredondados</h2>
+	<p>		
+		A propriedade border-radius permite adicionar o efeito de arredondamento no elemento. <br><br>
+		div { <br>
+		 border:2px solid #a1a1a1; <br>
+		 padding:10px 40px; <br>
+		 background:#dddddd; <br>
+		 width:300px; <br>
+		 border-radius:25px; <br>
+		 -moz-border-radius:25px; /* Firefox 3.6 and earlier */ <br>
+		}
+	</p>
+</div>
+
+
+<div>
+	<h2>CSS3 Sombreamento</h2>
+	<p>		
+		div
+		{
+		 -moz-box-shadow: 10px 10px 5px #888888; /* Firefox 3.6 and earlier */
+		 box-shadow: 10px 10px 5px #888888;
+		}
+	</p>
+</div>
+
+
+<div>
+	<h2>CSS3 Backgrounds</h2>
+	<p>
+		O css backgrounds possui algumas novidades como: <br>
+		• background-size <br>
+		• background-origin <br><br>
+		Firefox 3.6 e as versões anteriores não suportam a background-origin e necessitam do prefixo
+		–moz- e para suporte a background-size. <br><br>
+		Safari 4 necessita do prefixo –webkit- para dar suporte as novas propriedades.<br>
+		O internet Explorer 9, Firefox 4, Chrome, Safari 5 e Opera suportam as novas propriedades.
+	</p>
+
+	<h3>CSS3 Background Size – Especifíca o tamanho da imagem de fundo</h3>
+	<p>
+		div	{ <br>
+			 background:url(img_flwr.gif);<br>
+			 -moz-background-size:80px 60px; /* Firefox 3.6 */<br>
+			 background-size:80px 60px;<br>
+			 background-repeat:no-repeat;<br>
+			}<br><br>
+
+			div	{<br>
+			 background:url(img_flwr.gif);<br>
+			 -moz-background-size:100% 100%; /* Firefox 3.6 */<br>
+			 background-size:100% 100%;<br>
+			 background-repeat:no-repeat;<br>
+			}
+	</p>
+
+	<h3>CSS3 background-origin - Especifica a posição da área que a imagem será exibida como fundo </h3>
+	<p>
+		div	{<br>
+			 background:url(img_flwr.gif);<br>
+			 background-repeat:no-repeat;<br>
+			 background-size:100% 100%;<br>
+			 -webkit-background-origin:content-box; /* Safari */<br>
+			 background-origin:content-box;<br>
+			}
+	</p>
+</div>
+
+<div>
+	<h2>CSS3 Text Effetcs</h2>
+	<p>
+		O text effetcs possui duas propriedades como text-shadow e word-wrap <br>
+		<br>
+		text-shadow<br>
+		<br>
+		h2 {<br>
+		 text-shadow: 5px 5px 5px #FF0000;<br>
+		}<br>
+		<br><br>
+		Efeito quebra de linha word-wrap<br>
+		<br>
+		p {word-wrap:break-word;}<br>
+	</p>
+</div>
+
+<div>
+	<h2>CSS3 Font-Face </h2>
+
+	<p>
+		Antes de CSS3, os web designers tinha que utilizar fontes instaladas previamente no
+		computador do usuário.		
+	</p>
+
+	<p>
+		Com essa nova característica você pode disponibilizar o arquivo no servidor web, e ele será
+		automaticamente baixado para o usuário, quando necessário.
+	</p>
+
+	<p>
+		@font-face{ <br>
+		 font-family: myFirstFont;<br>
+		 src: url(‘Sansation_Light.ttf’),<br>
+		 url(‘Sansation_Light.eot’); /* IE9+ */<br>
+		}<br>
+		<br>
+		div<br>
+		{<br>
+		 font-family:myFirstFont;<br>
+		}<br>
+	</p>
+</div>
+
+<div style="transform: rotate(10deg);
+		 	-ms-transform: rotate(10deg); /* IE 9 */
+		 	-webkit-transform: rotate(10deg); /* Safari and Chrome */
+		 	-o-transform: rotate(10deg); /* Opera */
+		 	-moz-transform: rotate(10deg);
+		 	margin-top: 100px;
+		 	margin-bottom: 100px; ">
+	<h3>CSS3 Transforms </h3>
+
+	<p>
+		Com CSS3 tranforms você pode esticar, girar, aumentar e torcer elemento. O efeito modifica a figura, tamanho e posição
+	</p>
+
+	<p>
+		div	{ <br>
+		 transform: rotate(30deg);<br>
+		 -ms-transform: rotate(30deg); /* IE 9 */<br>
+		 -webkit-transform: rotate(30deg); /* Safari and Chrome */<br>
+		 -o-transform: rotate(30deg); /* Opera */<br>
+		 -moz-transform: rotate(30deg); /* Firefox */<br>
+		}
+	</p>
+</div>
+
+<div style="transform: translate(50px,100px);
+			-ms-transform: translate(50px,100px); /* IE 9 */
+			-webkit-transform: translate(50px,100px); /* Safari and Chrome */
+			-o-transform: translate(50px,100px); /* Opera */
+			-moz-transform: translate(50px,100px); /* Firefox */">
+	<h3>CSS3 Translate </h3>
+	<p>
+		Com CSS3 translate você pode mover de uma posição para a outra dependendo do parâmetros de posição passados da esquerda ( x ) e to top ( y )
+	</p>
+
+	<p>
+		div { <br>
+			transform: translate(50px,100px);<br>
+			-ms-transform: translate(50px,100px); /* IE 9 */<br>
+			-webkit-transform: translate(50px,100px); /* Safari and Chrome */<br>
+			-o-transform: translate(50px,100px); /* Opera */<br>
+			-moz-transform: translate(50px,100px); /* Firefox */<br>
+		}
+	</p>
+</div>
+
+<div id="menu">
+	<h2>Item Fixo</h2>
+
+	<p>
+		#menu { <br>
+		  position: fixed;<br>
+		  right: 0;<br>
+		  top: 50%;<br>
+		  width: 8em;<br>
+		  margin-top: -2.5em;<br>
+		}
+	</p>
+</div>
+
+</body>
+</html>

@@ -12,16 +12,16 @@ var html =
 '            <a class="nav-link" href="Pages/002-HTML-5.html">HTML 5</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="#">CSS</a>\n'+  
+'            <a class="nav-link" href="Pages/003-CSS.html">CSS</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="#">JavaScript</a>\n'+  
+'            <a class="nav-link disabled" href="Pages/">JavaScript</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="#">jQuery</a>\n'+  
+'            <a class="nav-link disabled" href="Pages/">jQuery</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="#">Ajax</a>\n'+  
+'            <a class="nav-link disabled" href="Pages/">Ajax</a>\n'+  
 '          </li>\n'+  
 '        </ul>\n'+    
 '      </div>\n'+  
