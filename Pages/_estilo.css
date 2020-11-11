@@ -1,0 +1,49 @@
+.DivClass
+	{
+		border:2px solid #a1a1a1;
+		padding:10px 40px;
+		background:rgba(0,0,0,0.03);
+		width:900px;
+		border-radius:15px;
+		-moz-border-radius:15px; /* Firefox 3.6 and earlier */
+		-moz-box-shadow: 10px 10px 5px #888888; /* Firefox 3.6 and earlier */
+	 	box-shadow: 10px 10px 5px #888888;
+	 	margin: 25px auto;
+		}
+
+h2 { text-shadow: 5px 5px 5px #00000F; }
+
+.titulo{
+	background-color: lightgray;
+	text-align: center;
+}
+
+.text-center{text-align: center;}
+
+.bg-blue{
+	background-color: rgba(50,50,255,0.05);
+}
+
+.color-red{color: red;}
+
+.CodClass 
+	{
+		border:2px solid #a1a1a1;
+		color: white;
+		background-color: black;
+		width: 750px;
+		border-radius:5px;
+		-moz-border-radius:5px; /* Firefox 3.6 and earlier */
+		padding-left: 10px;
+	}
+
+.CodHtml
+	{
+		border:2px solid #a1a1a1;
+		color: green;
+		background-color: white;
+		width: 600px;
+		border-radius:5px;
+		-moz-border-radius:5px; /* Firefox 3.6 and earlier */
+		padding-left: 10px;
+	}
