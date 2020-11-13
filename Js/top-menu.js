@@ -21,7 +21,7 @@ var html =
 '            <a class="nav-link" href="https://jhmiante.github.io/Pages/005-jQuery.html">jQuery</a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
-'            <a class="nav-link disabled" href="https://jhmiante.github.io/Pages/">Ajax</a>\n'+  
+'            <a class="nav-link" href="https://jhmiante.github.io/Pages/006-Ajax.html">Ajax</a>\n'+  
 '          </li>\n'+
 '		   <li class="nav-item">\n'+  
 '            <a class="nav-link" href="https://github.com/jhmiante/WEB/tree/main/CST%20-%20An%C3%A1lise%20e%20Desenvolvimento%20de%20Sistemas">GitHub Web</a>\n'+  
