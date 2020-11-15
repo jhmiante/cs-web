@@ -3,7 +3,7 @@ var html =
 '      <div class="navbar-collapse" id="navbarCollapse">\n'+  
 '        <ul class="navbar-nav mr-auto">\n'+  
 '          <li class="nav-item active">\n'+  
-'            <a class="nav-link" href="https://jhmiante.github.io/cs-web/">Home <span class="sr-only">(current)</span></a>\n'+  
+'            <a class="nav-link" href="https://jhmiante.github.io/">Home <span class="sr-only">(current)</span></a>\n'+  
 '          </li>\n'+  
 '          <li class="nav-item">\n'+  
 '            <a class="nav-link" href="https://jhmiante.github.io/cs-web/Pages/001-Fundamentos-HTML.html">HTML</a>\n'+  
